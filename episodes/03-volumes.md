@@ -19,6 +19,8 @@ exercises: 2
 
 Where is data stored in a pod? 
 
+Stateless vs stateful
+
 What are volumes?
 
 How do I move data into the volumes?

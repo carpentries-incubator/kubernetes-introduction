@@ -19,3 +19,5 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 What are pods, Hello world, CLI runs, Yaml Runs, where do container images come from
+Other basic configurations
+
