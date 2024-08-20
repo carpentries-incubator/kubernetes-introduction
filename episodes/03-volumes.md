@@ -19,6 +19,8 @@ exercises: 2
 
 Where is data stored in a pod? 
 
+By default, Pods are stateless entities and should be treated as such. Anything the pod creates in it's filesystem is removed when the pod stops or dies. For temporary files and directories this is fine. However this is not condusive for research since results need to be saved somewhere. 
+
 Stateless vs stateful
 
 What are volumes?
