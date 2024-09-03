@@ -16,7 +16,9 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Basic overview of a services
+Services are a way to expose a deployment or pod to the network outside of a kubernetes cluster for a long term. 
+
+Short term example: https://docs.nationalresearchplatform.org/userdocs/running/monitoring/#tensorboard
 
 When to use a service
 
