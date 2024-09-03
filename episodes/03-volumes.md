@@ -21,9 +21,14 @@ Pods are stateless entities and should be treated as such. Anything the pod crea
 
 Volumes are the solution to this problem. The main type of volume used for pods is the Persistent Volume Claim or "PVC". These are requests to the Kubernetes cluster to "claim" space on the storage system or a Persistent Volume (PV) of a cluster. PVCs are scoped to different namespaces, which means that a PVC is not visible or accessible by another namespace on the Kubernetes cluster. 
 
-Once a PVC is mounted in a pod, data can be stored or retrieved from using the mount path on the container's filesystem. 
+Once a PVC is mounted in a pod, data can be stored or retrieved from using the mount path on the container's filesystem. This allows data to stay persistent after the pod is terminated. 
 
-How do I move data into the volumes? kubectl cp? 
+// How do I move data into the volumes? kubectl cp? 
+
+Data from a local computer can also then be copied to a PVC through a pod and using the mount path of the PVC. 
+```bash
+kubectl cp /path/to/file pod-name:/path/to/PVC
+```
 
 Exercise - Transfer data and view logs or something like that. 
 
