@@ -62,9 +62,9 @@ episodes:
 - 01-introduction.md
 - 02-pods.md
 - 03-volumes.md
-- 04-deployments.md
-- 05-services.md
-- 06-jobs.md
+- 04-jobs.md
+- 05-deployments.md
+- 06-services.md
 - 07-secrets.md
 
 # Information for Learners
