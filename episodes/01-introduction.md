@@ -34,9 +34,40 @@ Kubernetes provides a uniform platform and method across many different local an
 Kubernetes deployments and environments are managed using [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) files. These YAML files allow you to tell the Kubernetes cluster what you want from a specific environment for the cluster then to attempt to make that defined configuration. This also increases the ability to change things in a recorded manner using version control tools like Git. 
 
 
-EXERCISE: Basic commands for verifcation that the install works or they have access
-`kubectl get nodes` / pods / deployments / services / namespaces
 
+::: callout
+
+## Make sure everything is ready
+
+Before proceeding, double check that you have kubectl connected to a Kubernetes instance. `kubectl get nodes` will retreive all of the computers or nodes running in the Kubernetes environment. 
+
+```bash
+$ kubectl get nodes
+```
+
+You should see output similar to this:
+
+```output
+NAME       STATUS   ROLES           AGE   VERSION
+minikube   Ready    control-plane   90d   v1.30.0
+```
+:::
+::: callout
+## Double check things are good to go
+Lets also double check by looking at the available namespaces. We will talk more about what these are later. 
+
+```bash
+$ kubectl get namespaces
+```
+
+You should see output similar to this:
+
+```output
+NAME                   STATUS   AGE
+default                Active   90d
+kube-node-lease        Active   90d
+```
+:::
 
 ✅Commonly controlled with Yaml files and `kubectl apply -f FILENAME`
 
