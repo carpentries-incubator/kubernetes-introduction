@@ -22,12 +22,21 @@ Kubernetes, or "k8s" is an open source container orchestration platform to autom
 Traditionally, Kubernetes is aimed towards commercial environments and cloud infrastrutuce.
 Originally developed by Google and realeased open source and is now managed by the Cloud Native Computing Foundation or CNCF. 
 
-EXERCISE: Difficulties with software environments and moving across platforms. 
 
-Advantages of K8s for research
-✅- Common language for many platforms
--✅ NRP / Google / Amazon
--✅ Git / reproducible. 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Discuss with your neighbor
+
+What are some challenges you may have when you move from one computational environment to another for your research?
+For example moving from a local compute cluster to a different compute cluster.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Some examples you may have discussed:
+
+- item 1
+- item 2
+- item 3
 
 Kubernetes provides a uniform platform and method across many different local and commericial cloud infrastructure. This ensures that your application is able to operate the same from your local developmment system to a production Kubernetes environment or a commercial cloud environment. This also helps ensure that a research workflow using Kubernetes is able to be reproduced on any infrastructure using Kubernetes.
 
@@ -69,13 +78,21 @@ kube-node-lease        Active   90d
 ```
 :::
 
-✅Commonly controlled with Yaml files and `kubectl apply -f FILENAME`
-
-Explanation of API Server and expected state and observed state. 
-
 The `kubectl` command does not directly control the state of a Kubernetes cluster. Instead it communicates directly to the Kubernetes' controller through an API server. When you run `kubectl apply` or `kubectl delete`, the command execution doesn't directly change the environment. Instead it tells the controller through the API server an expected state of the environment and the Kubernetes controller will attempt to make the declared state the current state and keep the cluster in the desired state. This is called "declarative management", which simplifies the management of more complex systems. 
 
--- Compare to managing many docker containers. 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Talk about it
+
+With docker or other container platforms, what challenges may come up as you start scaling up and running more workflows?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Some challenges you may have thought of:
+
+- item 1
+- item 2
+- item 3
 
 Maybe split this from Intro -> Intro + CLI
 - Explore kubectl help, kubectl CMD help
