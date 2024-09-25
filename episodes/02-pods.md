@@ -52,15 +52,59 @@ metadata:
   name: hello-world-pod
 spec:
   containers:
-  - name: hello-world
-    image: hello-world-container
+  - name: hello-world-container
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args: ["echo 'Hello World! I am in a pod!' && sleep infinity"]
 ```
 
 ### What do the lines mean?
 
 When we apply or send the YAML file to the api Controller, the file's contents tell the controller what the desired state of your configuration is. 
-The `apiVersion` line states what version of Kubernetes API the file is going to use.  
+The `apiVersion` line states what version of Kubernetes API the file is going to use. 
+The `kind` line specifies what type of definition we are creating with this block of config
+The `metadata` section contains basic information about the Pod we are creating. In this case we are only specifying the name of the pod. 
+`spec` is the specifications of what we want the desired state of the pod to me. This file contains a basic single container Pod's specification.
+The specification is asking for one container named `hello-world-container` using the `busybox` image.  
+The `command` is what command we want the container to run, similar to changing the entrypoint using `docker run` and the args are the commands we will be running inside the `hello-world-container` container within our `hello-world` Pod.
 
+We can send this configuration to the API Controller using the `kubectl apply` command. 
+```bash
+kubectl apply -f hello-world.yaml
+```
+```output
+pod/hello-world-pod created
+```
+
+We can check the status of our Pod using `kubectl get`
+```bash
+kubectl get pods
+```
+```output
+NAME              READY   STATUS              RESTARTS   AGE
+hello-world-pod   0/1     ContainerCreating   0          9s
+```
+The output indicates that our single pod is not ready for use and is currently creating all of the specified containers. Since we are only using one container, this process should be fairly quick. 
+
+If we check again shortly after, we can see the Pod is ready and running. 
+```output
+NAME              READY   STATUS    RESTARTS   AGE
+hello-world-pod   1/1     Running   0          5s
+```
+
+::: callout
+We can get more details about the Pod including the creation process and progress today using `kubectl describe name-of-pod`
+
+
+:::
+
+We can check if our Pod has run or is running by checking the logs using `kubectl logs name-of-pod`.
+```bash
+kubectl logs hello-world-pod
+```
+```output
+Hello World! I am in a pod!
+```
 
 EXERCISE -- Basic Hello World Pod
 Explanation with it
