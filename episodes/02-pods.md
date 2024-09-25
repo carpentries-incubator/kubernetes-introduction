@@ -42,6 +42,26 @@ Kuberenetes pulls container images from the same sources that Docker would. This
 
 ## Exploring Pods
 
+We are going to create a basic "hello world" pod. Below is a YAML file containing all of the information that is needed for the API controller to spawn our pod and its container. 
+
+`hello-world.yaml`
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod
+spec:
+  containers:
+  - name: hello-world
+    image: hello-world-container
+```
+
+### What do the lines mean?
+
+When we apply or send the YAML file to the api Controller, the file's contents tell the controller what the desired state of your configuration is. 
+The `apiVersion` line states what version of Kubernetes API the file is going to use.  
+
+
 EXERCISE -- Basic Hello World Pod
 Explanation with it
 
