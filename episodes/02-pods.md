@@ -93,8 +93,32 @@ hello-world-pod   1/1     Running   0          5s
 ```
 
 ::: callout
-We can get more details about the Pod including the creation process and progress today using `kubectl describe name-of-pod`
 
+## Getting more details
+
+We can get more details about the Pod including the creation process and progress today using `kubectl describe pod name-of-pod`
+
+The `kubectl describe` provides a verbose description of different Kubernetes resources. You do need to specify both the type or `kind` of object and the name of the object itself that you want information on. 
+
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+```bash
+kubectl describe pod hello-world-pod
+```
+
+```output
+...
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  18m   default-scheduler  Successfully assigned default/hello-world-pod to minikube
+  Normal  Pulling    18m   kubelet            Pulling image "busybox"
+  Normal  Pulled     18m   kubelet            Successfully pulled image "busybox" in 1.638s (1.638s including waiting). Image size: 4261502 bytes.
+  Normal  Created    18m   kubelet            Created container hello-world-container
+  Normal  Started    18m   kubelet            Started container hello-world-container
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::
 
@@ -106,20 +130,12 @@ kubectl logs hello-world-pod
 Hello World! I am in a pod!
 ```
 
-EXERCISE -- Basic Hello World Pod
-Explanation with it
 
--- Describe Pod Demo
-
--- Pod States
-
--- Delete the pod
-
-EXERCISE -- Modify the YAML and try it out. What is the state, what did you change. 
-
--- Check the logs
-
-
+## Need to add or maybe add:
+- Pod States
+- Delete the pod
+  - And why
+- Exercise - Modify the YAML and apply vs delete and apply
 
 What are pods, Hello world, CLI runs, Yaml Runs, where do container images come from
 Other basic configurations
