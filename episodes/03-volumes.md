@@ -23,7 +23,54 @@ Volumes are the solution to this problem. The main type of volume used for pods 
 
 Once a PVC is mounted in a pod, data can be stored or retrieved from using the mount path on the container's filesystem. This allows data to stay persistent after the pod is terminated. 
 
-// How do I move data into the volumes? kubectl cp? 
+## Creating a PVC
+
+We can go ahead and create a PVC to store some data. 
+
+`pvc_storage.yaml`
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-test-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+```
+
+```bash
+kubectl apply -f pvc_storage.yaml
+```
+```output
+persistentvolumeclaim/my-test-pv-claim created
+```
+
+This created a PVC and dynamically made a PV since a PV did not yet exist. 
+
+We can check both by using `kubectl get pv` and `kubectl get pvc`. 
+
+```bash
+kubectl get pv
+```
+```output
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                          STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+pvc-7c06f9ef-909a-4cd7-b450-d136219a8964   8Gi        RWO            Delete           Bound    openproject/data-my-openproject-postgresql-0   standard       <unset>                          83d
+```
+
+
+```bash
+kubectl get pvc
+```
+```output
+NAME               STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+my-test-pv-claim   Pending                                      manual         <unset>                 82s
+```
+
+## Transfering data to and from a PVC
 
 Data from a local computer can also then be copied to a PVC through a pod and using the mount path of the PVC. 
 ```bash
