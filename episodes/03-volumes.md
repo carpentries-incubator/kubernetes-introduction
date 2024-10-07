@@ -23,9 +23,44 @@ Volumes are the solution to this problem. The main type of volume used for pods 
 
 Once a PVC is mounted in a pod, data can be stored or retrieved from using the mount path on the container's filesystem. This allows data to stay persistent after the pod is terminated. 
 
+## Creating a PV
+
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+## Some setups may do this automatically
+
+A Kubernetes cluster may automatically create a PV when a PVC is created. This will be mentioned in any documentation of the cluster itself. 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+First we need to create a Persistent Volume to give us a space to claim for files. 
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0001
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /mnt/pv0001/
+```
+
+- Details on PV 
+- naming
+- accessMode
+- Storage
+- Path
+
+This will create a dedicated space for our Pods to store files. The Pods won't have immediate access to store data in a PV. In order for the Pods to store data, they need to use a claim against the PV using a Persistent Volume Claim.  
+
 ## Creating a PVC
 
-We can go ahead and create a PVC to store some data. 
+For our Pods to store data, they need to claim space in a Persistent Volume. 
 
 `pvc_storage.yaml`
 ```yaml
@@ -41,6 +76,11 @@ spec:
     requests:
       storage: 3Gi
 ```
+
+This configuration will look for a Persistent Volume to claim against if there is a mathcing and available PV. 
+
+If there is an available and matching PV, a claim will then be available for a Pod or multiple Pods to use. 
+
 
 ```bash
 kubectl apply -f pvc_storage.yaml
@@ -72,7 +112,32 @@ my-test-pv-claim   Pending                                      manual         <
 
 ## Transfering data to and from a PVC
 
-Data from a local computer can also then be copied to a PVC through a pod and using the mount path of the PVC. 
+In order to transfer data to and from a PVC, you need to have the volume mounted in a pod for the transfer. Data from a local computer can then be copied to a PVC through the Pod using the mount path of the PVC. 
+
+First we will need to make a pod to copy our data through. We will use a similar structure as our first pod. 
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod
+spec:
+  containers:
+  - name: hello-world-container
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args: ["echo 'Hello World! I am in a pod!' && sleep infinity"]
+    volumeMounts:
+    - mountPath: /mnt/my_pvc
+      name: my-pvc-for-pod
+  volumes:
+    - name: my-pvc-for-pod
+      persistentVolumeClaim:
+        claimName: my-test-pv-claim
+```
+
+
+
 ```bash
 kubectl cp /path/to/file pod-name:/path/to/PVC
 ```
