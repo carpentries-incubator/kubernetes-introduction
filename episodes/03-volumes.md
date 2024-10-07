@@ -81,7 +81,6 @@ This configuration will look for a Persistent Volume to claim against if there i
 
 If there is an available and matching PV, a claim will then be available for a Pod or multiple Pods to use. 
 
-
 ```bash
 kubectl apply -f pvc_storage.yaml
 ```
@@ -135,12 +134,101 @@ spec:
       persistentVolumeClaim:
         claimName: my-test-pv-claim
 ```
+We can confirm if our `mountPath` has our PVC available by running `ls` in the pod. 
+```bash
+kubectl exec hello-world-pod -- /bin/sh -c "ls -l /mnt"
+```
+```output
+total 4
+drwxr-xr-x    2 root     root          4096 Oct  7 16:27 my_pvc
+```
 
+Since our Pod is running the `sleep` command indefinitely, the pod will remain active and we can use it to transfer some data. 
+
+We will create a basic file to place in the PVC. 
+In `my_file.md` we will insert the following text.
+`Hello, I am a file in a PVC!` 
+```bash
+nano my_file.md
+cat my_file.md
+```
+```output
+Hello, I am a file in a PVC!
+```
 
 
 ```bash
-kubectl cp /path/to/file pod-name:/path/to/PVC
+kubectl cp my_file.md hello-world-pod:/mnt/my_pvc/
 ```
+
+If we check the content of the PVC mounted in the Pod, we can see our file and look at it's contents. 
+
+```bash
+kubectl exec hello-world-pod -- /bin/sh -c "ls -l /mnt/my_pvc"
+```
+```output
+total 4
+-rw-rw-r--    1 1000     1000            29 Oct  7 16:49 my_file.md
+```
+
+```bash
+kubectl exec hello-world-pod -- /bin/sh -c "cat /mnt/my_pvc/my_file.md"
+```
+```output
+Hello, I am a file in a PVC!
+```
+
+## Verifying the data is persistent
+
+We can verify that the data is persistent by deleting the pod and creating a new pod. 
+```bash
+kubectl delete -f pvc_bind.yaml
+```
+```output
+pod "hello-world-pod" deleted
+```
+
+At this point any data in the Pod's filesystem itself would be gone as the Pod's filesystem is ephemeral.
+
+We will create a new Pod that will output the contents of the file.
+
+`check_pvc.yaml`
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: check-pvc-pod
+spec:
+  containers:
+  - name: file-check-container
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args: ["cat /mnt/my_pvc/my_file.md && sleep infinity"]
+    volumeMounts:
+    - mountPath: /mnt/my_pvc
+      name: my-pvc-for-pod
+  volumes:
+    - name: my-pvc-for-pod
+      persistentVolumeClaim:
+        claimName: my-test-pv-claim
+```
+```bash
+kubectl apply -f pvc_bind.yaml
+```
+```output
+pod/check-pvc-pod created
+```
+
+We can then check the logs of the pod to see the contents of the file. 
+```bash
+kubectl logs check-pvc-pod
+```
+
+```output
+Hello, I am a file in a PVC!
+```
+
+
 
 Exercise - Transfer data and view logs or something like that. 
 
