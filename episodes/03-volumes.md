@@ -228,7 +228,54 @@ kubectl logs check-pvc-pod
 Hello, I am a file in a PVC!
 ```
 
+We can also modify create a file in the volume using a Pod.
 
+`pod_create_file.yaml`
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: file-create-pod
+spec:
+  containers:
+  - name: file-create-container
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args: ["for i in 1 2 3 4 5; do cat /mnt/my_pvc/my_file.md >> /mnt/my_pvc/output.log; done; ls /mnt/my_pvc; cat /mnt/my_pvc/output.log && sleep infinity"]
+    volumeMounts:
+    - mountPath: /mnt/my_pvc
+      name: my-pvc-for-pod
+  volumes:
+    - name: my-pvc-for-pod
+      persistentVolumeClaim:
+        claimName: my-test-pv-claim
+```
 
-Exercise - Transfer data and view logs or something like that. 
+What we should expect to see is the contents of our PVC mounted in the pod and the contents of `output.log`
+```bash
+kubectl logs file-create-pod
+```
 
+```output
+my_file.md
+output.log
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+```
+We can then copy the `output.log` file back to our computer. 
+
+```bash
+kubectl cp file-create-pod:mnt/my_pvc/output.log output.log
+cat output.log
+```
+
+```output
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+Hello, I am a file in a PVC!
+```
