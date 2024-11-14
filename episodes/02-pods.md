@@ -193,10 +193,78 @@ pod "hello-world-pod" deleted
 When we use the file itself to delete the Pod, the definitions provided in the file automatically handle the resource name and type, while without the file, that information is needed in order for the Kubernetes controller to make an operation. 
 
 
+
+## Modifying the Pod
+
+While a pod is running, we can modify it's definitions and the API controllers will handle the transition for us. 
+
+If we switch the container definition in the Pod yaml file from `busybox` to another container, such as `ubuntu:23.04`, we can migrate our Pod. 
+
+After making the change, we can re-apply the definition file. 
+
+```bash
+kubectl apply -f hello-world.yaml
+```
+
+```output
+pod/hello-world-pod configured
+```
+
+The language has changed when we applied the new definition file to our Pod. When we made our Pod for the first time, it listed the Pod as "created". In this instance the Pod was "configured" and not "created". 
+
+We can also look at the actions that the Controller took to update our pod using the `describe` command. 
+
+```bash
+kubectl describe pod hello-world-pod
+```
+
+```output
+...
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  40s   default-scheduler  Successfully assigned default/hello-world-pod to minikube
+  Normal  Pulling    39s   kubelet            Pulling image "busybox"
+  Normal  Pulled     38s   kubelet            Successfully pulled image "busybox" in 718ms (718ms including waiting). Image size: 4269694 bytes.
+  Normal  Created    37s   kubelet            Created container hello-world-container
+  Normal  Started    37s   kubelet            Started container hello-world-container
+  Normal  Killing    18s   kubelet            Container hello-world-container definition changed, will be restarted
+  Normal  Pulling    4m53s                  kubelet            Pulling image "ubuntu:23.04"
+  Normal  Pulled     4m50s                  kubelet            Successfully pulled image "ubuntu:23.04" in 3.41s (3.41s including waiting). Image size: 70323206 bytes.
+  Normal  Created    4m45s (x2 over 5m43s)  kubelet            Created container hello-world-container
+  Normal  Started    4m45s (x2 over 5m43s)  kubelet            Started container hello-world-container
+```
+
+Here we can see that the Controller noticed the definition change, then worked to kill the existing Pod to remake it with the new definition. 
+
+We can also verify that the container has changed by checking its operating system with `cat /etc/os-release`
+
+```bash
+kubectl exec -it hello-world-pod -- /bin/sh -c "cat /etc/os-release"
+```
+
+```output
+PRETTY_NAME="Ubuntu 23.04"
+NAME="Ubuntu"
+VERSION_ID="23.04"
+...
+```
+
+We could achieve a similar result by deleting the Pod, making the changes, then reapplying the definition, however this has us doing the effort of managing our Pods, when instead we can let Kubernetes handle it. 
+
+
+_____
+
+::: callout
+## Clean up after the lesson
+
+Go ahead and check for any remaining Pods and kill them before moving on.
+
+:::
+
 ## Need to add or maybe add:
 - Pod States
-- Exercise - Modify the YAML and apply vs delete and apply
 
-What are pods, Hello world, CLI runs, Yaml Runs, where do container images come from
+What are pods, Hello world, CLI runs, Yaml Runs
 Other basic configurations
 
