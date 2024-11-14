@@ -81,4 +81,5 @@ SPECIFIC EXAMPLES
 - Examples they may work well for research
 - Deploy a deployment of some kind. 
 - Manages replica sets and updates and has many features. 
+- Talk about resource limits and need for such. 
 - Benefit in R/SCI Computing?
