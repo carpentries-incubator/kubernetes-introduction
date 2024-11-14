@@ -62,7 +62,7 @@ spec:
 
 When we apply or send the YAML file to the api Controller, the file's contents tell the controller what the desired state of your configuration is. 
 The `apiVersion` line states what version of Kubernetes API the file is going to use. 
-The `kind` line specifies what type of definition we are creating with this block of config
+The `kind` line specifies what type of object we are creating with this block of config
 The `metadata` section contains basic information about the Pod we are creating. In this case we are only specifying the name of the pod. 
 `spec` is the specifications of what we want the desired state of the pod to me. This file contains a basic single container Pod's specification.
 The specification is asking for one container named `hello-world-container` using the `busybox` image.  
@@ -130,11 +130,71 @@ kubectl logs hello-world-pod
 Hello World! I am in a pod!
 ```
 
+## Running commands in Pods
+
+During development and debugging of environments or verifying a quick command, it may be beneficial to get an interactive terminal within a pod or run a command within the pod. 
+
+We can pull up an interactive terminal in a pod using kubectl's `exec` command. 
+
+```bash
+kubectl exec -it hello-world-pod -- /bin/sh
+```
+
+```output
+/ #
+```
+
+To get out of the interactive session, run the `exit` command. 
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Explore the pod
+
+Run some commands within the pod to explore its environment. Some questions that can be answered are: 
+
+- What is the hostname of the Pod? 
+- What user are we running as within the Pod?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Individual commands can also be executed from within the Pod without the need for an interactive session. 
+```bash
+kubectl exec -it hello-world-pod -- /bin/sh -c "hostname"
+```
+
+```output
+hello-world-pod
+```
+
+## Cleaning up
+
+We can clean up our pods from this lesson by deleting them using kubectl's `delete` command. 
+To do this, we can either run the `delete` command similar to the `apply` command by specifying the file, or we can manually delete it by calling its name. 
+
+By specifying the filename, anything that is defined in the file will get removed. 
+```bash
+kubectl delete -f hello-world.yaml
+```
+
+```output
+pod "hello-world-pod" deleted
+```
+
+We can also run the same operation by specifying the resource type and resource name of the pod we are deleting. 
+
+```bash
+kubectl delete pod hello-world-pod
+```
+
+```output
+pod "hello-world-pod" deleted
+```
+
+When we use the file itself to delete the Pod, the definitions provided in the file automatically handle the resource name and type, while without the file, that information is needed in order for the Kubernetes controller to make an operation. 
+
 
 ## Need to add or maybe add:
 - Pod States
-- Delete the pod
-  - And why
 - Exercise - Modify the YAML and apply vs delete and apply
 
 What are pods, Hello world, CLI runs, Yaml Runs, where do container images come from
