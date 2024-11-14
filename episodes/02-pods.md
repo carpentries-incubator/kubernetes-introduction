@@ -262,9 +262,11 @@ Go ahead and check for any remaining Pods and kill them before moving on.
 
 :::
 
+____
+
 ## Need to add or maybe add:
 - Pod States
-
-What are pods, Hello world, CLI runs, Yaml Runs
-Other basic configurations
+- Init Containers?
+- Resource Limits?
+- Each Pod has an IP
 

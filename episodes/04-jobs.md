@@ -71,4 +71,9 @@ kubectl logs jobs/pi
 
 ## What are their benefits for research computing? 
 
-EXTRA - Multi Pod
+
+
+## Need to add or maybe add:
+- Multi Pod
+- Benefits for research computing
+- More Examples

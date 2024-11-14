@@ -75,8 +75,10 @@ spec:
 SPECIFIC EXAMPLES 
 - Where rolling updates, replicas, rollback, or monitoring may be better. 
 
-Talk about deployments. 
 
-Examples they may work well for research
-
-Deploy a deployment of some kind. 
+# Notes:
+- Talk about deployments. 
+- Examples they may work well for research
+- Deploy a deployment of some kind. 
+- Manages replica sets and updates and has many features. 
+- Benefit in R/SCI Computing?

@@ -99,4 +99,15 @@ Maybe split this from Intro -> Intro + CLI
 - This can be moved to the individual lessons to build an applied knowledge. 
 
 
+## Need to add or maybe add:
+- Setup Instructions
+- Master vs Worker Node
+- Brief Introduction of YAML?
 
+- Add Services
+- Add brief talk on deployments
+- Add Secrets
+- Add discussion on Helm?
+    - "Docker Compose"
+    - Where to host
+    - Benefit
