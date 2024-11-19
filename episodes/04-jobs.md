@@ -70,10 +70,10 @@ kubectl logs jobs/pi
 
 
 ## What are their benefits for research computing? 
-
+By using a Job, you are able to run tasks and workflows in a manner similar to traditional batch computing clusters. Unlike a Pod, a Job will run until a task completes up to a certain number of re-runs. A Pod does not have this function and would continously restart or follow the global restart policy. On a small local setup, this may not be a large challenge, but becomes critical when using a campus or regional Kubernetes cluster. 
+They also allow more flexibility in parralellization through the ability to have one Job spawn many Pods of the same type with different names.
 
 
 ## Need to add or maybe add:
-- Multi Pod
-- Benefits for research computing
+- Multi Pod?
 - More Examples
