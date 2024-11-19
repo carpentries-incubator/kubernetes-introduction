@@ -90,13 +90,9 @@ With docker or other container platforms, what challenges may come up as you sta
 
 Some challenges you may have thought of:
 
-- item 1
-- item 2
-- item 3
-
-Maybe split this from Intro -> Intro + CLI
-- Explore kubectl help, kubectl CMD help
-- This can be moved to the individual lessons to build an applied knowledge. 
+- Needing to micromanage everything running as projects scale
+- Many working components needing configured
+- 
 
 
 ## Need to add or maybe add:

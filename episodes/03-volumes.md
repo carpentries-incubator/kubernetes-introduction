@@ -36,6 +36,7 @@ A Kubernetes cluster may automatically create a PV when a PVC is created. This w
 
 First we need to create a Persistent Volume to give us a space to claim for files. 
 
+`pv_create.yaml`
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -50,11 +51,16 @@ spec:
     path: /mnt/pv0001/
 ```
 
-- Details on PV 
-- naming
-- accessMode
-- Storage
-- Path
+In our `pv_create.yaml`, we defined the basic details on our Persistent Volume. 
+We are using a generic nam, pv0001, for our Persistent Volume, but it can be any name if desired. 
+Since we are only running a single pod in this part of the lesson, we are using the ReadWriteOnce access mode, which allows multiple pods to access the volume if they are running on the same node. There are other access modes available that allow working across multiple nodes or setting it to read only. More details on this are available in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).  We also configured the Persistent Volume to have a capcity of 5 GB of space and have it on the host filesystem at `/mnt/pv0001`. 
+
+```bash
+kubectl apply -f pv_create.yaml
+```
+```output
+persistentvolume/pv0001 created
+```
 
 This will create a dedicated space for our Pods to store files. The Pods won't have immediate access to store data in a PV. In order for the Pods to store data, they need to use a claim against the PV using a Persistent Volume Claim.  
 
@@ -280,5 +286,3 @@ Hello, I am a file in a PVC!
 Hello, I am a file in a PVC!
 ```
 
-## Need to add or maybe add:
-- PV Access Modes
