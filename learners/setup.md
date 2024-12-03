@@ -2,17 +2,9 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
 ## Data Sets
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+No datasets are required to be downloaded for this lesson.
 
 ## Software Setup
 
@@ -20,35 +12,13 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 ### Details
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+This lesson is designed around having access to a campus or regional Kubernetes resource. If one is not available, you can create a local one on your computer using a tool called [Minikube](https://minikube.sigs.k8s.io). To use this tool, please visit the [setup guide for MiniKube](https://minikube.sigs.k8s.io/docs/start).
+
+If you have access to a campus or regional platform, please reach out to the support staff of the platform for getting access. As a part of a workshop, this should be handled for you. 
+
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::: spoiler
+To access and interact with the resources, you will need a command line tool called `kubectl`. Instructions on how to install this for your specific operating system are available at [https://kubernetes.io/docs/tasks/tools/#kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
-### Windows
-
-Use PuTTY
-
-::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
-### MacOS
-
-Use Terminal.app
-
-::::::::::::::::::::::::
-
-
-:::::::::::::::: spoiler
-
-### Linux
-
-Use Terminal
-
-::::::::::::::::::::::::
 
