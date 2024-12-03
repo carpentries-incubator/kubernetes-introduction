@@ -264,9 +264,5 @@ Go ahead and check for any remaining Pods and kill them before moving on.
 
 ____
 
-## Need to add or maybe add:
-- Pod States
-- Init Containers?
-- Resource Limits?
-- Each Pod has an IP
+
 

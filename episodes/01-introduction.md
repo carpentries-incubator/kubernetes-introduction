@@ -92,18 +92,5 @@ Some challenges you may have thought of:
 
 - Needing to micromanage everything running as projects scale
 - Many working components needing configured
-- 
+ 
 
-
-## Need to add or maybe add:
-- Setup Instructions
-- Master vs Worker Node
-- Brief Introduction of YAML?
-
-- Add Services
-- Add brief talk on deployments
-- Add Secrets
-- Add discussion on Helm?
-    - "Docker Compose"
-    - Where to host
-    - Benefit

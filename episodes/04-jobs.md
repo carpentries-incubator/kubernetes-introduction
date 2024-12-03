@@ -74,6 +74,3 @@ By using a Job, you are able to run tasks and workflows in a manner similar to t
 They also allow more flexibility in parralellization through the ability to have one Job spawn many Pods of the same type with different names.
 
 
-## Need to add or maybe add:
-- Multi Pod?
-- More Examples

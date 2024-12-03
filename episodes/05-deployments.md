@@ -40,7 +40,7 @@ spec:
   ...
 ```
 
-DESCRIBE the different parts of SPEC. 
+
 
 We can go ahead and build our first Deployment yaml file add the `spec` of the deployment.
 
@@ -72,14 +72,3 @@ spec:
         command: ["sh", "-c", "sleep infinity"]
 ```
 
-SPECIFIC EXAMPLES 
-- Where rolling updates, replicas, rollback, or monitoring may be better. 
-
-
-# Notes:
-- Talk about deployments. 
-- Examples they may work well for research
-- Deploy a deployment of some kind. 
-- Manages replica sets and updates and has many features. 
-- Talk about resource limits and need for such. 
-- Benefit in R/SCI Computing?
