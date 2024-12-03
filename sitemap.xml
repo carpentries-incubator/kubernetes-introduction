@@ -1,75 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/01-introduction.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/02-pods.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/03-volumes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/04-jobs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/aio.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/05-deployments.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/images.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/06-services.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/01-introduction.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/aio.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/images.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/02-pods.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/03-volumes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/04-jobs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/key-points.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/05-deployments.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/06-services.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor-notes.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/key-points.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://cbohn4.github.io/kubernetes-introduction/reference.html</loc>
   </url>
 </urlset>
