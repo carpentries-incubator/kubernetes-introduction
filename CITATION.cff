@@ -1,11 +1,10 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: FIXME
+title: >-
+  Reproducible Computational Environments Using Containers:
+  Introduction to Kubernetes
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +12,21 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Caughlin
+    family-names: Bohn
+    email: cbohn4@unl.edu
+    affiliation: University of Nebraska-Lincoln
+    orcid: 'https://orcid.org/0000-0001-5201-5050'
+repository-code: >-
+  https://github.com/carpentries-incubator/kubernetes-introduction
+url: >-
+  https://carpentries-incubator.github.io/kubernetes-introduction/
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  This lesson aims to introduce the use of Kubernetes with
+  the goal of using Kubernetes to enable reproducible
+  computational environments at scale.
+keywords:
+  - carpentries-incubator
+  - english
+  - kubernetes
 license: CC-BY-4.0
