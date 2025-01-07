@@ -63,8 +63,7 @@ episodes:
 - 02-pods.md
 - 03-volumes.md
 - 04-jobs.md
-- 05-deployments.md
-- 06-services.md
+- 05-services.md
 
 # Information for Learners
 learners: 
