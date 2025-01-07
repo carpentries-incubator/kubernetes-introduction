@@ -34,9 +34,9 @@ For example moving from a local compute cluster to a different compute cluster.
 
 Some examples you may have discussed:
 
-- item 1
-- item 2
-- item 3
+- Different methods of interacting with the environment
+- Keywords could be different or processed differently
+- Software may not be available readily
 
 Kubernetes provides a uniform platform and method across many different local and commericial cloud infrastructure. This ensures that your application is able to operate the same from your local developmment system to a production Kubernetes environment or a commercial cloud environment. This also helps ensure that a research workflow using Kubernetes is able to be reproduced on any infrastructure using Kubernetes.
 
