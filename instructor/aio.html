@@ -292,19 +292,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-deployments.html">5. Deployments in Kubernetes</a>
-    </div>
-<!--/div.accordion-header-->
-
-  </div>
-<!--/div.accordion-item-->
-</div>
-<!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="06-services.html">6. Volumes in Kubernetes</a>
+        <a href="05-services.html">5. Volumes in Kubernetes</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -370,9 +358,9 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">What is Kubernetes?</a></p>
 <hr>
-<p>Last updated on 2024-12-03 |
+<p>Last updated on 2025-01-07 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -426,9 +414,9 @@ moving from a local compute cluster to a different compute cluster.</p>
 </div>
 <p>Some examples you may have discussed:</p>
 <ul>
-<li>item 1</li>
-<li>item 2</li>
-<li>item 3</li>
+<li>Different methods of interacting with the environment</li>
+<li>Keywords could be different or processed differently</li>
+<li>Software may not be available readily</li>
 </ul>
 <p>Kubernetes provides a uniform platform and method across many
 different local and commericial cloud infrastructure. This ensures that
@@ -523,7 +511,7 @@ as you start scaling up and running more workflows?</p>
 <hr>
 <p>Last updated on 2024-12-03 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/02-pods.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/02-pods.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -587,7 +575,7 @@ is also the same as what you would use for Docker.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Example formats </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <ul>
 <li>
@@ -702,7 +690,7 @@ want information on.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -917,7 +905,7 @@ any links that you are not going to use.
 <hr>
 <p>Last updated on 2024-12-03 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/03-volumes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/03-volumes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -979,7 +967,7 @@ stay persistent after the pod is terminated.</p>
   Some setups may do this automatically
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>A Kubernetes cluster may automatically create a PV when a PVC is
 created. This will be mentioned in any documentation of the cluster
@@ -1306,9 +1294,9 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-jobs"><p>Content from <a href="04-jobs.html">Jobs in Kubernetes</a></p>
 <hr>
-<p>Last updated on 2024-12-03 |
+<p>Last updated on 2025-01-07 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1377,7 +1365,7 @@ file.</p>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="at">      </span><span class="fu">restartPolicy</span><span class="kw">:</span><span class="at"> Never</span></span>
 <span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="at">  </span><span class="fu">backoffLimit</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre>
 </div>
-<p>Example from <a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/" class="external-link uri">https://kubernetes.io/docs/concepts/workloads/controllers/job/</a></p>
+<p><code>Example from https://kubernetes.io/docs/concepts/workloads/controllers/job/</code></p>
 <p>The example above will run a perl container that compute Pi to 2000
 digits. The backoff Limit also prevents a Job from running continously
 in a crash loop if any of the Pods spawned by the Job fail. In the
@@ -1420,118 +1408,11 @@ with different names.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-05-deployments"><p>Content from <a href="05-deployments.html">Deployments in Kubernetes</a></p>
+</section></section><section id="aio-05-services"><p>Content from <a href="05-services.html">Volumes in Kubernetes</a></p>
 <hr>
-<p>Last updated on 2024-12-03 |
+<p>Last updated on 2025-01-07 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/05-deployments.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>What are deployments and why might I want to use it?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Understand what Deployments do at the control plane # This needs to
-be better</li>
-<li>Create and deploy Deployments to a Kubernetes cluster.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="how-would-you-coordinate-multiple-pods" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="how-would-you-coordinate-multiple-pods" class="callout-inner">
-<h3 class="callout-title">How would you coordinate multiple pods?</h3>
-<div class="callout-content">
-<p>For workflows or environments with a pod or two, managing the pods is
-a trivial task. What about 5, 10, or 20 pods working together?</p>
-</div>
-</div>
-</div>
-<p>Deployments are a way to manage the spawning and manipulation of many
-pods working together on a larger set of applications. As we use more
-pods for different steps or iterations, we may get to a point where
-multi pods will need to work together. This can be something small like
-a pod running a database in conjunction with another pod doing
-operations within the database. Another case, would be deployment
-packages that have multiple components working together in tandem or
-they may be part of a larger infrastructure like a science gateway.</p>
-<p>More information on science gateways is available at <a href="https://sciencegateways.org/" class="external-link uri">https://sciencegateways.org/</a>.</p>
-<section><h2 class="section-heading" id="creating-and-running-a-deployment">Creating and running a deployment<a class="anchor" aria-label="anchor" href="#creating-and-running-a-deployment"></a>
-</h2>
-<hr class="half-width">
-<p>Similar to creating Pods, Volumes, and Jobs, deployments have the
-same general structure of metadata and definitions.</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">apiVersion</span><span class="kw">:</span><span class="at"> apps/v1</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Deployment</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">metadata</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-first-deployment</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">spec</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="at">  ...</span></span></code></pre>
-</div>
-<p>We can go ahead and build our first Deployment yaml file add the
-<code>spec</code> of the deployment.</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">apiVersion</span><span class="kw">:</span><span class="at"> apps/v1</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Deployment</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">metadata</span><span class="kw">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> my-first-deployment</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">spec</span><span class="kw">:</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="at">  </span><span class="fu">replicas</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="at">  </span><span class="fu">selector</span><span class="kw">:</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="at">    </span><span class="fu">matchLabels</span><span class="kw">:</span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="at">      </span><span class="fu">k8s-app</span><span class="kw">:</span><span class="at"> test-dep</span></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="at">    </span><span class="fu">metadata</span><span class="kw">:</span></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="at">      </span><span class="fu">labels</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="at">        </span><span class="fu">k8s-app</span><span class="kw">:</span><span class="at"> test-dep</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="at">    </span><span class="fu">spec</span><span class="kw">:</span></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="at">      </span><span class="fu">containers</span><span class="kw">:</span></span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> mypod</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="at">        </span><span class="fu">image</span><span class="kw">:</span><span class="at"> ubuntu</span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="at">        </span><span class="fu">resources</span><span class="kw">:</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="at">           </span><span class="fu">limits</span><span class="kw">:</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="at">             </span><span class="fu">memory</span><span class="kw">:</span><span class="at"> 500Mi</span></span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="at">             </span><span class="fu">cpu</span><span class="kw">:</span><span class="at"> 500m</span></span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="at">           </span><span class="fu">requests</span><span class="kw">:</span></span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="at">             </span><span class="fu">memory</span><span class="kw">:</span><span class="at"> 100Mi</span></span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="at">             </span><span class="fu">cpu</span><span class="kw">:</span><span class="at"> 50m</span></span>
-<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="at">        </span><span class="fu">command</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"sh"</span><span class="kw">,</span><span class="at"> </span><span class="st">"-c"</span><span class="kw">,</span><span class="at"> </span><span class="st">"sleep infinity"</span><span class="kw">]</span></span></code></pre>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-06-services"><p>Content from <a href="06-services.html">Volumes in Kubernetes</a></p>
-<hr>
-<p>Last updated on 2024-12-03 |
-
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/06-services.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/05-services.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1586,12 +1467,12 @@ public internet or a local campus network.</p></section>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/cbohn4/kubernetes-introduction/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/cbohn4/kubernetes-introduction/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/cbohn4/kubernetes-introduction/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:cbohn4@unl.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/carpentries-incubator/kubernetes-introduction/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/carpentries-incubator/kubernetes-introduction/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/carpentries-incubator/kubernetes-introduction/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:cbohn4@unl.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -1611,18 +1492,18 @@ public internet or a local campus network.</p></section>
     {
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
-  "@id": "https://cbohn4.github.io/kubernetes-introduction/instructor/aio.html",
+  "@id": "https://carpentries-incubator.github.io/kubernetes-introduction/instructor/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "kubernetes, containers, hpc, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://cbohn4.github.io/kubernetes-introduction/instructor/aio.html",
-  "identifier": "https://cbohn4.github.io/kubernetes-introduction/instructor/aio.html",
+  "url": "https://carpentries-incubator.github.io/kubernetes-introduction/instructor/aio.html",
+  "identifier": "https://carpentries-incubator.github.io/kubernetes-introduction/instructor/aio.html",
   "dateCreated": "2024-07-21",
-  "dateModified": "2024-12-03",
-  "datePublished": "2024-12-03"
+  "dateModified": "2025-01-07",
+  "datePublished": "2025-01-07"
 }
 
   </script><script>

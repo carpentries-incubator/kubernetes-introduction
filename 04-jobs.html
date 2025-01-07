@@ -118,11 +118,11 @@
   Reproducible Computational Environments Using Containers: Introduction to Kubernetes
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 50%" class="percentage">
-    50%
+<aside class="col-md-12 lesson-progress"><div style="width: 60%" class="percentage">
+    60%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 50%" aria-valuenow="50" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 60%" aria-valuenow="60" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -254,16 +254,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-deployments.html">5. Deployments in Kubernetes</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="06-services.html">6. Volumes in Kubernetes</a>
+        <a href="05-services.html">5. Volumes in Kubernetes</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -312,7 +303,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-volumes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="05-deployments.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="05-services.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -320,16 +311,16 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Volumes in
         </a>
-        <a class="chapter-link float-end" href="05-deployments.html" rel="next">
-          Next: Deployments in...
+        <a class="chapter-link float-end" href="05-services.html" rel="next">
+          Next: Volumes in...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Jobs in Kubernetes</h1>
-        <p>Last updated on 2024-12-03 |
+        <p>Last updated on 2025-01-07 |
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -397,7 +388,7 @@ file.</p>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="at">      </span><span class="fu">restartPolicy</span><span class="kw">:</span><span class="at"> Never</span></span>
 <span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="at">  </span><span class="fu">backoffLimit</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre>
 </div>
-<p>Example from <a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/" class="external-link uri">https://kubernetes.io/docs/concepts/workloads/controllers/job/</a></p>
+<p><code>Example from https://kubernetes.io/docs/concepts/workloads/controllers/job/</code></p>
 <p>The example above will run a perl container that compute Pi to 2000
 digits. The backoff Limit also prevents a Job from running continously
 in a crash loop if any of the Pods spawned by the Job fail. In the
@@ -441,7 +432,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-volumes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="05-deployments.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="05-services.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -449,8 +440,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Volumes in
         </a>
-        <a class="chapter-link float-end" href="05-deployments.html" rel="next">
-          Next: Deployments in...
+        <a class="chapter-link float-end" href="05-services.html" rel="next">
+          Next: Volumes in...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -462,12 +453,12 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/cbohn4/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/carpentries-incubator/kubernetes-introduction/edit/main/episodes/04-jobs.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/cbohn4/kubernetes-introduction/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/cbohn4/kubernetes-introduction/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/cbohn4/kubernetes-introduction/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:cbohn4@unl.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/carpentries-incubator/kubernetes-introduction/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/carpentries-incubator/kubernetes-introduction/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/carpentries-incubator/kubernetes-introduction/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:cbohn4@unl.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -486,18 +477,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
-  "@id": "https://cbohn4.github.io/kubernetes-introduction/04-jobs.html",
+  "@id": "https://carpentries-incubator.github.io/kubernetes-introduction/04-jobs.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "kubernetes, containers, hpc, The Carpentries",
   "name": "Jobs in Kubernetes",
   "creativeWorkStatus": "active",
-  "url": "https://cbohn4.github.io/kubernetes-introduction/04-jobs.html",
-  "identifier": "https://cbohn4.github.io/kubernetes-introduction/04-jobs.html",
+  "url": "https://carpentries-incubator.github.io/kubernetes-introduction/04-jobs.html",
+  "identifier": "https://carpentries-incubator.github.io/kubernetes-introduction/04-jobs.html",
   "dateCreated": "2024-07-21",
-  "dateModified": "2024-12-03",
-  "datePublished": "2024-12-03"
+  "dateModified": "2025-01-07",
+  "datePublished": "2025-01-07"
 }
 
   </script><script>
