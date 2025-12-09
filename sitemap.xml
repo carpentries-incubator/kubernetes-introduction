@@ -34,6 +34,9 @@
     <loc>https://carpentries-incubator.github.io/kubernetes-introduction/aio.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/kubernetes-introduction/citation.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/kubernetes-introduction/images.html</loc>
   </url>
   <url>
@@ -71,6 +74,9 @@
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/kubernetes-introduction/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/kubernetes-introduction/instructor/citation.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/kubernetes-introduction/instructor/images.html</loc>
